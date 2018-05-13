@@ -8,14 +8,10 @@ import android.view.MenuItem;
 
 import com.ngh.huuduc197.myapplication.R;
 import com.ngh.huuduc197.myapplication.databases.MyDatabases;
-import com.ngh.huuduc197.myapplication.fragments.BookmarkFragment;
 import com.ngh.huuduc197.myapplication.fragments.BookmarkView;
 import com.ngh.huuduc197.myapplication.fragments.HistoriesView;
-import com.ngh.huuduc197.myapplication.fragments.HistoryFragment;
 import com.ngh.huuduc197.myapplication.fragments.HomeFragment;
-import com.ngh.huuduc197.myapplication.fragments.HomeView;
 import com.ngh.huuduc197.myapplication.fragments.SettingView;
-import com.ngh.huuduc197.myapplication.fragments.SettingsFragment;
 
 public class MainActivity extends AppCompatActivity {
     public static MyDatabases db;

@@ -16,11 +16,8 @@ import android.widget.Toast;
 
 import com.ngh.huuduc197.myapplication.R;
 import com.ngh.huuduc197.myapplication.databases.DatabaseHandler;
-<<<<<<< HEAD
-=======
 import com.ngh.huuduc197.myapplication.databases.MyDatabases;
 import com.ngh.huuduc197.myapplication.models.Link;
->>>>>>> 6a28d87b50f6274bffc7a162503d377136304d62
 
 public class HomeFragment extends Fragment {
 
@@ -38,11 +35,7 @@ public class HomeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-<<<<<<< HEAD
-
-=======
         databases = new MyDatabases(getContext());
->>>>>>> 6a28d87b50f6274bffc7a162503d377136304d62
     }
 
     @Override
@@ -111,8 +104,6 @@ public class HomeFragment extends Fragment {
         WebSetting.setJavaScriptEnabled(true);
 
 
-<<<<<<< HEAD
-=======
         web.setWebViewClient(new WebViewClient() {
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
@@ -137,7 +128,6 @@ public class HomeFragment extends Fragment {
             }
         });
 
->>>>>>> 6a28d87b50f6274bffc7a162503d377136304d62
         return view;
     }
 
