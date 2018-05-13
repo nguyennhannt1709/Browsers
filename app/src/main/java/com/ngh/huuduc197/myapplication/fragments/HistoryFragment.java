@@ -11,7 +11,8 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.ngh.huuduc197.myapplication.databases.KetNoiDB;
+import com.ngh.huuduc197.myapplication.databases.DatabaseHandler;
+//import com.ngh.huuduc197.myapplication.databases.DatabaseHandler;
 import com.ngh.huuduc197.myapplication.R;
 import com.ngh.huuduc197.myapplication.models.getSet;
 
@@ -32,7 +33,7 @@ public class HistoryFragment extends Fragment {
     //KetNoiDB db;
     //SimpleCursorAdapter adapter;
 
-    KetNoiDB db; // goi class Database moi tao
+    DatabaseHandler db; // goi class Database moi tao
     ListView listcv;
     ArrayList<getSet> arrayCongViec;
     Button btn;
