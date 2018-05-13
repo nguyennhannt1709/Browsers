@@ -13,6 +13,9 @@
     <string name="nav_bookmark">BookMarks</string>
     <string name="nav_tab">Add Tab</string>
     <string name="nav_history">History</string>
+    <string name="img_setting">imgS</string>
+    <string name="imgage_setting">imgSetting</string>
+    <string name="toggle">toggle</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

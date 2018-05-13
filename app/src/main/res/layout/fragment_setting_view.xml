@@ -1,13 +1,37 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.ngh.huuduc197.myapplication.fragments.SettingView">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ImageView
+        android:id="@string/img_setting"
+        android:layout_width="48dp"
+        android:layout_height="51dp"
+        android:background="@null"
+        android:src="@drawable/icons8_moon_star_64"
+        android:contentDescription="@string/imgage_setting"
+        />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/textSet"
+        android:layout_width="247dp"
+        android:layout_height="49dp"
+        android:text="Chế độ ban đêm"
+        android:textSize="25dp"
+        android:textColor="#000000"
+
+        />
+
+    <ToggleButton
+        android:id="@+id/tog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:textOff="Off"
+        android:textOn="On"
+
+        />
+
+</LinearLayout>
