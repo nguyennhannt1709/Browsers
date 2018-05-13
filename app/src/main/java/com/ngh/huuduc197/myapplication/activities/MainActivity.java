@@ -8,13 +8,16 @@ import android.view.MenuItem;
 
 import com.ngh.huuduc197.myapplication.R;
 import com.ngh.huuduc197.myapplication.fragments.BookmarkFragment;
+import com.ngh.huuduc197.myapplication.fragments.BookmarkView;
+import com.ngh.huuduc197.myapplication.fragments.HistoriesView;
 import com.ngh.huuduc197.myapplication.fragments.HistoryFragment;
 import com.ngh.huuduc197.myapplication.fragments.HomeFragment;
+import com.ngh.huuduc197.myapplication.fragments.HomeView;
+import com.ngh.huuduc197.myapplication.fragments.SettingView;
 import com.ngh.huuduc197.myapplication.fragments.SettingsFragment;
 
 public class MainActivity extends AppCompatActivity {
 
-   // private TextView mTextMessage;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -28,23 +31,16 @@ public class MainActivity extends AppCompatActivity {
 
             switch (item.getItemId()) {
                 case R.id.nav_home:
-                        transaction.replace(R.id.relative,new HomeFragment()).commit();
-                 //   Intent k = new Intent(MainActivity.this, MainHomeActivity.class);
-                   // startActivity(k);
-                   // mTextMessage.setText(R.string.title_home);
+                        transaction.replace(R.id.relative,new HomeView()).commit();
                     return true;
                 case R.id.nav_bookmark:
-                    transaction.replace(R.id.relative, new BookmarkFragment()).commit();
-                   // mTextMessage.setText("bookmark");
+                    transaction.replace(R.id.relative, new BookmarkView()).commit();
                     return true;
                 case R.id.nav_settings:
-                    transaction.replace(R.id.relative, new SettingsFragment()).commit();
-                   // mTextMessage.setText("setting");
+                    transaction.replace(R.id.relative, new SettingView()).commit();
                     return true;
                 case R.id.nav_history:
-                    transaction.replace(R.id.relative, new HistoryFragment()).commit();
-                   // mTextMessage.setText("add tab");
-
+                    transaction.replace(R.id.relative, new HistoriesView()).commit();
 
                     return true;
             }
@@ -57,13 +53,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-      //  mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
 
         android.support.v4.app.FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.relative,new HomeFragment()).commit();
+        transaction.replace(R.id.relative,new HomeView()).commit();
 
     }
 
