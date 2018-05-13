@@ -11,9 +11,13 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+<<<<<<< HEAD
 import com.ngh.huuduc197.myapplication.databases.DatabaseHandler;
 //import com.ngh.huuduc197.myapplication.databases.DatabaseHandler;
+=======
+>>>>>>> c33bb1e1832098bd9ece85d7026772c4ca4a5176
 import com.ngh.huuduc197.myapplication.R;
+import com.ngh.huuduc197.myapplication.databases.DatabaseHandler;
 import com.ngh.huuduc197.myapplication.models.getSet;
 
 import java.util.ArrayList;
@@ -29,9 +33,6 @@ public class HistoryFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
-    //ArrayList<Show> mang;
-    //KetNoiDB db;
-    //SimpleCursorAdapter adapter;
 
     DatabaseHandler db; // goi class Database moi tao
     ListView listcv;
@@ -97,11 +98,7 @@ public class HistoryFragment extends Fragment {
         super.onAttach(context);
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
-        } else {
-            //throw new RuntimeException(context.toString()
-                   // + " must implement OnFragmentInteractionListener");
-            Toast.makeText(context, "History Fragment", Toast.LENGTH_SHORT).show();
-        }
+        } else {}
     }
 
     @Override
