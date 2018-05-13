@@ -15,16 +15,15 @@ import java.util.List;
  * Created by huuduc on 09/05/2018.
  */
 
-public class KetNoiDB extends SQLiteOpenHelper {
+public class  DatabaseHandler extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME="quanlyWeb";
     private static final String TABLE_BROWSER = "Browser";
     private static final String KEY_ID = "_id";
     private static final String COL_NAME = "link";
 
-    public KetNoiDB(Context context) {
+    public DatabaseHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
-
     }
 
 

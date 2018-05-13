@@ -7,22 +7,22 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.os.Bundle;
 
-import com.ngh.huuduc197.myapplication.databases.KetNoiDB;
 import com.ngh.huuduc197.myapplication.R;
+import com.ngh.huuduc197.myapplication.databases.DatabaseHandler;
 
 /**
  * Created by huuduc on 12/05/2018.
  */
 
 public class Show extends AppCompatActivity {
-    KetNoiDB db;
+    DatabaseHandler db;
     SimpleCursorAdapter adapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_hienthi);
-        db = new KetNoiDB(this);
+        db = new DatabaseHandler(this);
 
         /// ket noi db va lay du lieu tu csdl
         Cursor cursor = db.LayTatCaBr();
