@@ -1,4 +1,4 @@
-package com.ngh.huuduc197.myapplication;
+package com.ngh.huuduc197.myapplication.fragments;
 
 import android.content.Context;
 import android.net.Uri;
@@ -15,7 +15,8 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import java.util.ArrayList;
+import com.ngh.huuduc197.myapplication.databases.KetNoiDB;
+import com.ngh.huuduc197.myapplication.R;
 
 
 /**

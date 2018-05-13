@@ -1,15 +1,16 @@
-package com.ngh.huuduc197.myapplication;
+package com.ngh.huuduc197.myapplication.activities;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.TextView;
+
+import com.ngh.huuduc197.myapplication.R;
+import com.ngh.huuduc197.myapplication.fragments.BookmarkFragment;
+import com.ngh.huuduc197.myapplication.fragments.HistoryFragment;
+import com.ngh.huuduc197.myapplication.fragments.HomeFragment;
+import com.ngh.huuduc197.myapplication.fragments.SettingsFragment;
 
 public class MainActivity extends AppCompatActivity {
 

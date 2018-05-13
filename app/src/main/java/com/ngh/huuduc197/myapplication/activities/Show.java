@@ -1,4 +1,4 @@
-package com.ngh.huuduc197.myapplication;
+package com.ngh.huuduc197.myapplication.activities;
 
 import android.database.Cursor;
 import android.support.annotation.Nullable;
@@ -6,6 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.os.Bundle;
+
+import com.ngh.huuduc197.myapplication.databases.KetNoiDB;
+import com.ngh.huuduc197.myapplication.R;
+
 /**
  * Created by huuduc on 12/05/2018.
  */

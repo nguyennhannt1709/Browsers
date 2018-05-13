@@ -1,11 +1,12 @@
-package com.ngh.huuduc197.myapplication;
+package com.ngh.huuduc197.myapplication.databases;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.provider.Browser;
+
+import com.ngh.huuduc197.myapplication.models.getSet;
 
 import java.util.ArrayList;
 import java.util.List;

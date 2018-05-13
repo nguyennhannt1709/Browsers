@@ -1,4 +1,4 @@
-package com.ngh.huuduc197.myapplication;
+package com.ngh.huuduc197.myapplication.fragments;
 
 import android.content.Context;
 import android.net.Uri;
@@ -7,18 +7,26 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Toast;
+
+import com.ngh.huuduc197.myapplication.databases.KetNoiDB;
+import com.ngh.huuduc197.myapplication.R;
+import com.ngh.huuduc197.myapplication.models.getSet;
+
+import java.util.ArrayList;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link SettingsFragment.OnFragmentInteractionListener} interface
+ * {@link HistoryFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link SettingsFragment#newInstance} factory method to
+ * Use the {@link HistoryFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SettingsFragment extends Fragment {
+public class HistoryFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,8 +37,16 @@ public class SettingsFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+    //ArrayList<Show> mang;
+    //KetNoiDB db;
+    //SimpleCursorAdapter adapter;
 
-    public SettingsFragment() {
+    KetNoiDB db; // goi class Database moi tao
+    ListView listcv;
+    ArrayList<getSet> arrayCongViec;
+    Button btn;
+
+    public HistoryFragment() {
         // Required empty public constructor
     }
 
@@ -40,11 +56,11 @@ public class SettingsFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment SettingsFragment.
+     * @return A new instance of fragment HistoryFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static SettingsFragment newInstance(String param1, String param2) {
-        SettingsFragment fragment = new SettingsFragment();
+    public static HistoryFragment newInstance(String param1, String param2) {
+        HistoryFragment fragment = new HistoryFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -65,7 +81,27 @@ public class SettingsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_settings, container, false);
+       // mang = new ArrayList<Show>();
+
+
+        View view = inflater.inflate(R.layout.fragment_history, container, false);
+        //ListView listView = (ListView) view.findViewById(R.id.list);
+        //final Class<Show> showClass = Show.class;
+        btn = (Button)view.findViewById(R.id.button);
+
+//        btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(getActivity(), Show.class);
+//                startActivity(i);
+//            }
+//        });
+
+
+        return view;
+
+
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -83,7 +119,7 @@ public class SettingsFragment extends Fragment {
         } else {
             //throw new RuntimeException(context.toString()
                    // + " must implement OnFragmentInteractionListener");
-            Toast.makeText(context, "Home Fragment", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "History Fragment", Toast.LENGTH_SHORT).show();
         }
     }
 

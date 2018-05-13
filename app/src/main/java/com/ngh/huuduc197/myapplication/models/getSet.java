@@ -1,4 +1,4 @@
-package com.ngh.huuduc197.myapplication;
+package com.ngh.huuduc197.myapplication.models;
 
 /**
  * Created by huuduc on 13/05/2018.
