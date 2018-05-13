@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
             switch (item.getItemId()) {
                 case R.id.nav_home:
-                        transaction.replace(R.id.relative,new HomeView()).commit();
+                        transaction.replace(R.id.relative,new HomeFragment()).commit();
                     return true;
                 case R.id.nav_bookmark:
                     transaction.replace(R.id.relative, new BookmarkView()).commit();
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
 
         android.support.v4.app.FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.relative,new HomeView()).commit();
+        transaction.replace(R.id.relative,new HomeFragment()).commit();
 
     }
 
