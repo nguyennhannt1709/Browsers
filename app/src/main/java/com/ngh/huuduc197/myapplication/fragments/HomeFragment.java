@@ -110,6 +110,13 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        urlEditText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                urlEditText.selectAll();
+            }
+        });
+
         return view;
     }
 
