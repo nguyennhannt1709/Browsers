@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.ngh.huuduc197.myapplication.R;
+import com.ngh.huuduc197.myapplication.databases.MyDatabases;
 import com.ngh.huuduc197.myapplication.fragments.BookmarkFragment;
 import com.ngh.huuduc197.myapplication.fragments.BookmarkView;
 import com.ngh.huuduc197.myapplication.fragments.HistoriesView;
@@ -17,7 +18,7 @@ import com.ngh.huuduc197.myapplication.fragments.SettingView;
 import com.ngh.huuduc197.myapplication.fragments.SettingsFragment;
 
 public class MainActivity extends AppCompatActivity {
-
+    public static MyDatabases db;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -52,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        db = new MyDatabases(this);
+        db.createDefaultLinks();
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);

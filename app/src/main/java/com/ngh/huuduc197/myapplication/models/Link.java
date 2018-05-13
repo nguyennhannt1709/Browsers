@@ -5,23 +5,38 @@ package com.ngh.huuduc197.myapplication.models;
  */
 
 public class Link {
-    String _id;
+    int _id;
+    String title;
     String url;
 
-    public Link(String _id, String url) {
+    public Link(int _id, String title, String url) {
         this._id = _id;
+        this.title = title;
+        this.url = url;
+    }
+
+    public Link(String title, String url) {
+        this.title = title;
         this.url = url;
     }
 
     public Link() {
     }
 
-    public String get_id() {
+    public int get_id() {
         return _id;
     }
 
-    public void set_id(String _id) {
+    public void set_id(int _id) {
         this._id = _id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getUrl() {

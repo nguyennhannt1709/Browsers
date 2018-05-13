@@ -1,8 +1,6 @@
 package com.ngh.huuduc197.myapplication.fragments;
 
-import android.content.Context;
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -18,6 +16,8 @@ import android.widget.Toast;
 
 import com.ngh.huuduc197.myapplication.R;
 import com.ngh.huuduc197.myapplication.databases.DatabaseHandler;
+import com.ngh.huuduc197.myapplication.databases.MyDatabases;
+import com.ngh.huuduc197.myapplication.models.Link;
 
 public class HomeFragment extends Fragment {
 
@@ -25,6 +25,7 @@ public class HomeFragment extends Fragment {
     Button btnGo;
     EditText urlEditText;
     WebView web;
+    MyDatabases databases;
 
     public HomeFragment() {
     }
@@ -34,13 +35,14 @@ public class HomeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        databases = new MyDatabases(getContext());
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.fragment_home, container, false);
+
         btnGo = (Button)view.findViewById(R.id.btnGo);
         nImageButton=(ImageButton)view.findViewById(R.id.next);
         bImageButton=(ImageButton)view.findViewById(R.id.back);
@@ -107,6 +109,15 @@ public class HomeFragment extends Fragment {
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
                 super.onPageStarted(view, url, favicon);
                 urlEditText.setText(url);
+            }
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                super.onPageFinished(view, url);
+                Link link = new Link();
+                link.setUrl(url);
+                link.setTitle(view.getTitle());
+                databases.addLink(link);
             }
         });
 
